@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict';
 const {
   Model
@@ -22,3 +23,21 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Matriculas;
 };
+=======
+'use strict'
+module.exports = (sequelize, DataTypes) => {
+  const Matriculas = sequelize.define('Matriculas', {
+    status: DataTypes.STRING
+  }, {})
+  Matriculas.associate = function(models) {
+    Matriculas.belongsTo(models.Pessoas, {
+      foreignKey: 'estudante_id'
+    })
+    Matriculas.belongsTo(models.Turmas, {
+      foreignKey: 'turma_id'
+    })
+
+  }
+  return Matriculas
+}
+>>>>>>> f3eb26c646025b71e2998d7260c317743a193680

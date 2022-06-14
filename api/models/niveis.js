@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict';
 const {
   Model
@@ -21,3 +22,17 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Niveis;
 };
+=======
+'use strict'
+module.exports = (sequelize, DataTypes) => {
+  const Niveis = sequelize.define('Niveis', {
+    descr_nivel: DataTypes.STRING
+  }, {})
+  Niveis.associate = function(models) {
+    Niveis.hasMany(models.Turmas, {
+      foreignKey: 'nivel_id'
+    })
+  }
+  return Niveis
+}
+>>>>>>> f3eb26c646025b71e2998d7260c317743a193680

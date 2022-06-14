@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const path = require('path');
 
 module.exports ={
@@ -5,4 +6,13 @@ module.exports ={
     'models-path': path.resolve('./api/models'),
     'seeders-path': path.resolve('./api/seeders'),
     'migrations-path':path.resolve('./api/migrations')
+=======
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('./api/config', 'config.json'),
+  'models-path': path.resolve('./api/models'),
+  'seeders-path': path.resolve('./api/seeders'),
+  'migrations-path': path.resolve('./api/migrations')
+>>>>>>> f3eb26c646025b71e2998d7260c317743a193680
 }
